@@ -17,7 +17,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>APA</title>
+  <title>ServiCreditosRH</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -59,9 +59,9 @@
     <!-- Logo -->
     <a href="dashboard.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>APA</b></span>
+        <span class="logo-mini"><b>R&H</b></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Asociación</b>Academias</span>
+        <span class="logo-lg"><b>Servicreditos</b>R&H</span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">

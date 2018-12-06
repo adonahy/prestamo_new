@@ -3,7 +3,7 @@ d<?php
     //$con = mysql_connect("localhost","id3680779_prestamo","Presta1234");
 
    //$con = mysqli_connect("localhost", "root", "Itzy2409", "prestamo");;
-$con = mysqli_connect("localhost", "root", "", "tac_academia");
+$con = mysqli_connect("localhost", "root", "", "prestamo");
    	//$con = mysqli_connect("mysql.hostinger.com", "u696063629_prest", "Itzy2409", "u696063629_prest");;
 
 	if (!$con)
