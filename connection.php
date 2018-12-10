@@ -1,4 +1,4 @@
-d<?php
+<?php
     //$con = mysql_connect("variedadesselzoicom.fatcowmysql.com","servicreditosrh","Servi1234");
     //$con = mysql_connect("localhost","id3680779_prestamo","Presta1234");
 

@@ -3,7 +3,7 @@
     session_start();
     require 'connection.php';
     
-    //$da = date("m/d/Y");
+    
     error_reporting(0);
 
     $usu    =   $_POST['user'];

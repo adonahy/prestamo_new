@@ -1,4 +1,5 @@
 <?php
+
 echo '
 <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -10,7 +11,7 @@ echo '
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Selvin Benito</p>
+          <p>'. $u .'</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
