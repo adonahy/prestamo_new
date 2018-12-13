@@ -40,6 +40,50 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+    
+    <script>
+    (function(){
+	var content = document.getElementById("geolocation-test");
+
+	if (navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(function(objPosition)
+		{
+			var lon = objPosition.coords.longitude;
+			var lat = objPosition.coords.latitude;
+
+			content.innerHTML = "<p><strong>Latitud:</strong> " + lat + "</p><p><strong>Longitud:</strong> " + lon + "</p>";
+
+		}, function(objPositionError)
+		{
+			switch (objPositionError.code)
+			{
+				case objPositionError.PERMISSION_DENIED:
+					content.innerHTML = "No se ha permitido el acceso a la posición del usuario.";
+				break;
+				case objPositionError.POSITION_UNAVAILABLE:
+					content.innerHTML = "No se ha podido acceder a la información de su posición.";
+				break;
+				case objPositionError.TIMEOUT:
+					content.innerHTML = "El servicio ha tardado demasiado tiempo en responder.";
+				break;
+				default:
+					content.innerHTML = "Error desconocido.";
+			}
+		}, {
+			maximumAge: 75000,
+			timeout: 15000
+		});
+	}
+	else
+	{
+		content.innerHTML = "Su navegador no soporta la API de geolocalización.";
+	}
+})();
+
+    
+    
+    </script>
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -78,7 +122,15 @@ if($security == 'go'){
       </ol>
     </section>
 
+    <?php
+      
+    $query1 =   "SELECT COUNT(`dpi`) 
+                FROM `clientes` ";  
+    $queryc =   mysqli_query($con, $query1);
+    $result =   mysqli_fetch_array($queryc);
     
+    $clientes_total =   $result['COUNT(`dpi`)'];
+      ?>
 
     <!-- Main content -->
     <section class="content">
@@ -118,9 +170,9 @@ if($security == 'go'){
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
+              <h3><?php echo $clientes_total;?></h3>
 
-              <p>Alumnos inscritos</p>
+              <p>Clientes Registrados</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
